@@ -5,8 +5,12 @@ require __DIR__ . '/Autoload/Autoload.php';
 // require $rootDir . 'App/Http/Controllers/HomeController.php';
 // require $rootDir . 'App/Http/Controllers/NewController.php';
 
-$homeController = new App\Http\Controllers\HomeController();
-$homeController->index();
+// 2. Định tuyến controller, action dựa vào hệ thống routing build in
+$routeinstance = new Router\Router();
 
-$newController = new App\Http\Controllers\NewController();
-$newController->index();
+//require router
+require __DIR__ . '/Router/web.php';
+
+//dispath route
+$pathCurrent = $_SERVER["REQUEST_URI"];
+$routeinstance->disopatchRoute($pathCurrent);
