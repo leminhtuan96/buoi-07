@@ -25,8 +25,12 @@ class HomeController {
         $productModel = new Product();
         if ($requestMethod == "POST")
         {
-            print_r($_POST);
-            $productModel -> insert($_POST);
+            $productModel -> insert([
+                "name" => $_POST["name"],
+                "description" => $_POST["description"],
+                "price" => $_POST["price"]
+            ]);
+            header("location: /");
         }
          return View::render("home/create.php"); 
     }
