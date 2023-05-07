@@ -49,6 +49,7 @@ class BaseModel
 
         $placeHolderSql = implode(', ', $tmpPlaceHolder);
         $sql = "INSERT INTO $table ($columns) VALUES ($placeHolderSql)";
+        var_dump($sql);
         // chuan bi sql
         $stmt = $this->pdo->prepare($sql);
         // thuc thi sql

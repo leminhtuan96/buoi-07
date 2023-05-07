@@ -16,16 +16,16 @@
         <div class="container">
 
             <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="name" class="form-control" placeholder="Name">
+                <label>Name</label>
+                <input name="name" type="text" class="form-control" placeholder="Name">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Description</label>
-                <textarea class="form-control" placeholder="Description" rows="3"></textarea>
+                <label>Description</label>
+                <textarea name="description" class="form-control" placeholder="Description" rows="3"></textarea>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Price</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <label>Price</label>
+                <select class="form-control" name="price">
                     <option>100</option>
                     <option>200</option>
                     <option>300</option>
