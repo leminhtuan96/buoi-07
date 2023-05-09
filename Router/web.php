@@ -17,3 +17,11 @@ $routeinstance->addRoute(
         'action' => 'create'
     ]
 );
+
+$routeinstance->addRoute(
+    '/products/edit',
+    [
+        'controller' => 'App\Http\Controllers\HomeController',
+        'action' => 'edit'
+    ]
+);

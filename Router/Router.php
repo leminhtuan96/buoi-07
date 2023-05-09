@@ -12,6 +12,8 @@ class Router
 
     public function disopatchRoute($pathCurrent)
     {
+        $pathCurrent = explode("?", $pathCurrent);
+        $pathCurrent = $pathCurrent[0];
         foreach ($this->routes as $path => $routeCurrent) {
             if ($path === $pathCurrent) {
                 $controller = $routeCurrent["controller"];
